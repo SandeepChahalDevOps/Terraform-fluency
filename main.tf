@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "dev-server" {
-  instance_type = "t2.micro"
-  ami = "ami1234"
+  instance_type = var.instance-type
+  ami = var.ami-id
   tags = {
     name = "dev-server"
   }
