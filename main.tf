@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-01"
+  region = "us-east-1"
 }
 
-resource "aws_instance" "dev-server" {
-  instance_type = var.instance-type
-  ami = var.ami-id
+resource "aws_instance" "dev_server" {
+  instance_type = var.instance_type
+  ami = var.ami_id
   tags = {
-    name = "dev-server"
+    name = "dev_server"
   }
 }
